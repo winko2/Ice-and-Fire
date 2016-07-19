@@ -1,0 +1,197 @@
+/* Typographic / Base
+-----------------------------------*/
+* {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.1em;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #2980b9;
+}
+
+b, strong { font-weight: 400; }
+
+h1, h2, h3, h4, h5, h6 { padding: 0.25rem; font-weight: 300; }
+
+h1 { font-size: 4.2rem; }
+h2 { font-size: 3.8rem; }
+h3 { font-size: 3.2rem; }
+h4 { font-size: 2.8rem; }
+h5 { font-size: 2.4rem; }
+h6 { font-size: 2.0rem; }
+
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Navigation
+-----------------------------------*/
+nav {
+  padding: 20px 5% 20px 5%;
+  position: relative;
+}
+
+nav a.brand { font-weight: 700; }
+
+nav a.brand, nav ul, nav ul li {
+  display: inline-block;
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+}
+
+nav ul li {
+  padding: 0 10px;
+}
+
+nav #hamburger {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  background: none;
+  border: none;
+  position: relative;
+  margin: -5px 10px;
+  cursor: pointer;
+  float: right;
+  display: none;
+}
+
+nav #hamburger > span {
+  margin-top:7px;
+  width: 30px;
+  height: 2px;
+  background-color: #3498db;
+  position: relative;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 800px) {
+  nav ul {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+    width: 100%;
+  }
+
+  nav ul li {
+    margin: 20px auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul.show {
+    transition: max-height 1s;
+    max-height: 800px;
+    display: block;
+    width: 100%;
+  }
+
+  nav #hamburger {
+    display: block;
+  }
+}
+
+/* Form
+-----------------------------------*/
+.button {
+  padding: 5px 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #3498db;
+  color: #fff;
+  border-radius: 3px;
+  margin: 5px;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #2980b9;
+  color: #fff;
+}
+
+.form-control {
+  font-size: 20px;
+  padding: 5px 10px;
+  outline: none;
+  border: 1px solid #ddd6d6;
+  background-color: #fff;
+  border-radius: 3px;
+  margin-top: 2.5px;
+  margin-bottom: 5px;
+  width: 100%;
+  transition: border 0.2s;
+}
+
+.form-control:focus {
+  border-color: #3498db;
+}
+
+form {
+  padding: 15px 5px;
+}
+
+.form-sm {
+  max-width: 300px;
+  margin: auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+/* Alerts
+-----------------------------------*/
+.alert {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000;
+  transition: opacity 0.2s;
+  opacity: 1.0;
+}
+
+.alert.alert-info {
+  background-color: #3498db;
+  border-color: #3498db;
+  color: #fff;
+}
+
+.alert.alert-success {
+  background-color: #2ecc71;
+  border-color: #2ecc71;
+  color: #fff;
+}
+
+.alert.alert-danger {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+  color: #fff;
+}
+
+/* Grid
+-----------------------------------*/
+.container {
+  width: 95%;
+  margin: auto;
+  max-width: 960px;
+}

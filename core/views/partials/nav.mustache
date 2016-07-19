@@ -1,0 +1,28 @@
+</head>
+<body>
+  {{#info}}
+    <div class="alert alert-info">{{info}}</div>
+  {{/info}}
+  {{#success}}
+    <div class="alert alert-success">{{success}}</div>
+  {{/success}}
+  {{#danger}}
+    <div class="alert alert-danger">{{danger}}</div>
+  {{/danger}}
+  <nav>
+    <a href="http://{{host}}" class="brand">Ice and Fire</a>
+    <a id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+    <ul id="nav-content">
+      {{^session.auth}}
+      <li><a href="#">Sign up</a></li>
+      <li><a href="http://{{host}}/signin"class="button">Sign in</a></li>
+      {{/session.auth}}
+      {{#session.auth}}
+      <li><a href="http://{{host}}/signout">Sign out</a></li>
+      {{/session.auth}}
+    </ul>
+  </nav>
